@@ -103,5 +103,16 @@ Device #13:
 nvidia官网上说明：MLNX_OFED_LINUX-24.10-3.2.5.0匹配的固件版本是：28.43.3608
 <img width="2559" height="1365" alt="image" src="https://github.com/user-attachments/assets/76412b22-138a-4470-8cd7-727b89021928" />
 但是这个也不能绝对的只看nvidia，还要看看厂商的意见
+设备厂商编号：5350 G7
+CX7网卡PN：[PN] Part number: MCX755106AS-HEAT
+查询PN的命令是
+```text
+lspci -vvv -s 13:00.0
+```
 
+<img width="2151" height="893" alt="image" src="https://github.com/user-attachments/assets/ca7a0a95-d596-4f81-be7f-f9b6204666ff" />
+选择最新的这个推荐
+<img width="2541" height="1087" alt="image" src="https://github.com/user-attachments/assets/92c69009-686f-4215-8d6f-307696b6339a" />
+我们当前的驱动版本与厂商推荐的不同，同理固件版本也是不同的
 
+所以……更新IB网卡驱动和固件版本吧
